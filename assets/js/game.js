@@ -6,11 +6,32 @@ var playerMoney = 10;
 //You can also log multiple values at once like this 
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roberto";
+var enemyNames = ["Roberto", "Big Poppa", "Swoleman Jenkins"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function() {
+// // pulls whole array
+// console.log(enemyNames);
+// // pulls individual names from array
+// console.log(enemyNames[0]); // Roberto
+// console.log(enemyNames[1]); // Big Poppa
+// console.log(enemyNames[2]); // Swoleman Jenkins
+// // will not show because at the time there is no 3rd robot
+// console.log(enemyNames[3]); // undefined 
+// // shows length of array in devTools
+// console.log(enemyNames.length);
+// // equation below will show the word apple 3 times
+// for(var i = 0; i < 3; i++) {
+//     console.log("apple", i);
+// }
+// // will list out enemy names by length
+// for(var i = 0; i < enemyNames.length; i++) {
+//     console.log(enemyNames[i]);
+//     console.log(i);
+//     console.log(enemyNames[i] + " is at " + i + " index");
+// }
+
+var fight = function(enemyName) {
     // Alert players that the round is beginning
     window.alert('Welcome to Robot Gladiators!');
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -58,4 +79,6 @@ var fight = function() {
 
 }
 
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
